@@ -1,0 +1,129 @@
+body{
+    background-color: #2c2c2c;
+}
+
+
+
+.show-bar{
+  width: 50%;
+  max-height: 30px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.circle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(2, 2, 58);
+  position: relative;
+}
+
+.mini-circle{
+  width:10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+
+.square-parent{
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+
+.square-task {
+  width: 300px;
+  background-color: rgb(2, 2, 58);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-img {
+  background-image: url("/images/annoncument\ website.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.task-details {
+
+  flex-grow: 1;
+  padding: 10px;
+}
+
+
+.plus{
+  background: #64c2df;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  color: white;
+  font-weight: bold;
+  position: fixed;
+  bottom: 20px;
+  border:none;
+  padding-bottom: 13px;
+  left: 20px;
+}
+
+@media (max-width:440px){
+ .plus{
+  position: fixed;
+  bottom: 20px;
+  margin-top: 10px;
+ }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100%;
+  background-color: #444;
+  padding: 20px;
+   transition: right 0.3s;
+}
+
+
+.sidebar.active {
+  right: 0;
+}
+
+#task-desc{
+  width: 300px;
+}
+
+
+
+.square-parent:hover{
+  
+  padding-top: 10px;
+
+}
+
+.fa-trash{
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 13px;
+  margin: 10px;
+}
+
+.btn:hover{
+  background-color: white !important;
+}
