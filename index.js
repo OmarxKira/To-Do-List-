@@ -1,8 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
-    storedTasks.forEach(task => displayTask(task));
-});
-
 document.getElementById('addTaskForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -86,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function displayTask(task){
+    
     const newTaskHTML = `
         <div class="square-parent text-white" data-id="${task.ID}">
             <div class="square-task position-relative">
